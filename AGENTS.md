@@ -28,3 +28,6 @@ use the editor.
   own key and store it in Secrets.
 - **Secrets.** Lovable manages them. Do not put secret values in the repo.
 <!-- LOVABLE:END -->
+
+- Language, theme and cart live in one client provider (src/lib/app-state.tsx) persisted to localStorage; all copy comes from src/lib/i18n.ts so both languages stay in sync.
+- Product catalog is static data in src/data/products.ts; cart math is pure functions in src/lib/cart-math.ts so it stays testable.
